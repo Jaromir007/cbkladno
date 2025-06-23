@@ -15,8 +15,25 @@
 </head>
 
 <body class="body page" id="body">
-    <!-- Header start -->
-  <header class="header"></header>
+  <!-- Header start -->
+  <header class="header">
+    <?php
+      if (has_custom_logo()) {
+        echo get_custom_logo(); 
+      } else {
+        bloginfo('name'); 
+      }
+    ?>
+    <?php
+      wp_nav_menu([
+        'theme_location' => 'Primary',
+        'menu_class' => 'primary-menu',
+        'container' => false,
+      ]);
+    ?>
+
+  </header>
+  <!-- Header end -->
 
   <!-- Main content start -->
   <main class="page__inner">

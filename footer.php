@@ -6,12 +6,15 @@
  */
 ?>
 
-<!-- Main content end -->
 </div>
 </main>
+<!-- Main content end -->
 
 <!-- Footer start -->
-<footer class="footer"></footer>
+<footer class="footer">
+
+</footer>
+<!-- Footer end -->
 
 <?php wp_footer(); ?>
 </body>
