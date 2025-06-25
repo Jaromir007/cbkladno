@@ -16,7 +16,7 @@
 
 <body class="body page" id="body">
   <!-- Header start -->
-  <header class="header" style="display: none;">
+  <header class="header">
     <?php
       if (has_custom_logo()) {
         echo get_custom_logo(); 
@@ -31,7 +31,6 @@
         'container' => false,
       ]);
     ?>
-
   </header>
   <!-- Header end -->
 

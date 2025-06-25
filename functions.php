@@ -13,16 +13,32 @@ function cbkladno_setup() {
 
 add_action('after_setup_theme', 'cbkladno_setup');
 
-// Load local fonts
-function load_local_fonts() {
+// Load fonts
+function cbkladno_enqueue_fonts() {
     wp_enqueue_style(
         'local-fonts',
-        get_template_directory_uri() . '/assets/fonts/fonts.css',
+        get_template_directory_uri() . '/assets/fonts/montserrat/css/montserrat.css',
         array(),
         null
     );
+    wp_enqueue_style(
+        'fontawesome-pro',
+        get_template_directory_uri() . '/assets/fonts/fontawesome/css/all.min.css',
+        array(),
+        null 
+    );
 }
-add_action('wp_enqueue_scripts', 'load_local_fonts');
+add_action('wp_enqueue_scripts', 'cbkladno_enqueue_fonts');
+
+function mytheme_enqueue_fontawesome_pro() {
+    wp_enqueue_style(
+        'fontawesome-pro',
+        get_template_directory_uri() . '/assets/fontawesome/css/all.min.css',
+        array(),
+        null // or the version number
+    );
+}
+add_action('wp_enqueue_scripts', 'mytheme_enqueue_fontawesome_pro');
 
 
 function cbkladno_enqueue_scripts() {
